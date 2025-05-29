@@ -1457,3 +1457,45 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.button-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+  background-color: #1f2937; /* dark gray */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: white; /* slightly lighter gray */
+  color: #374151;
+  border-color: #374151;
+}
+
+.divider {
+  width: 2px;
+  height: 42px;
+  background-color: #9ca3af; /* Tailwind's gray-400 */
+}
+
+.linkedin-button {
+  font-size: 1.5rem;
+  color: #0e76a8;
+  transition: color 0.3s ease;
+}
+
+.linkedin-button:hover {
+  color: #085d8f;
+}
