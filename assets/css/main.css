@@ -35,6 +35,7 @@
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --theme-color: #1f2937;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -864,16 +865,17 @@ section,
   background-color: var(--surface-color);
   box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
   height: 100%;
-  padding: 60px 30px;
+  padding: 20px 20px;
   text-align: center;
+  justify-content: center;
   transition: 0.3s;
   border-radius: 5px;
 }
 
 .services .service-item .icon {
   margin: 0 auto;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1504,4 +1506,123 @@ section,
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
   color: #1f2937;
 }
+
+.portrait-gif {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* adjust based on layout */
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.img-large {
+  width: 400px;
+  height: auto;
+}
+
+
+/* Skills Section */
+
+#skills {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+#skills .container {
+  width: 100%;
+  max-width: 1200px; /* or whatever layout width you prefer */
+  padding: 0 1rem;
+}
+
+.skills .row {
+  justify-content: center;
+}
+
+.skills .container.section-title {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+.skills .skill-box {
+  background: #ffffff;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 12px;
+  align-items: center;
+  border-radius: 12px;
+  padding: 20px 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills .logo-wrapper {
+  justify-content: flex-start;
+}
+
+.skills .text-wrapper {
+  justify-self: end;
+}
+
+.skills .skill-box:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Logo styling */
+.skill-logo {
+  width: 48px;
+  height: 48px;
+  color: var(--theme-color);
+}
+
+/* Light ray hover effect */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* Match icon size + buffer */
+}
+
+
+.hover-ray {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255,255,255,0.7), rgba(255, 255, 255, 0));
+  transform: translate(-100%, -100%) rotate(25deg);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+
+
+.skill-box:hover .hover-ray {
+  transform: rotate(25deg) translate(100%, 100%);
+  opacity: 1;
+}
+
+/* Optional: spacing */
+.skills h5 {
+  font-weight: 600;
+}
+
 
